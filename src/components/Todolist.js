@@ -7,7 +7,7 @@ export class Todolist extends Component {
   render() {
     //this act as foreach like a loop on the state elements 
     return this.props.todos.map((todo) => (    
-    <Todocard  key={todo.id} todo={todo} actioniscompleted={this.props.actioniscompleted} actionisdeleted={this.props.actionisdeleted}/>
+    <Todocard key={todo.id} todo={todo} actioniscompleted={this.props.actioniscompleted} actionisdeleted={this.props.actionisdeleted}/>
     ));
   }
 }

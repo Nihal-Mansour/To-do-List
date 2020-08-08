@@ -2,22 +2,24 @@ import React, { Component } from 'react';
 import './App.css';
 import Todolist from './components/Todolist'
 import Navbar from './components/Navbar'
+import Addaction from './components/Addaction'
+import {v4 as uuid} from 'uuid'
 
 class App extends Component{
   state = {
     todos:[
       {
-        id:1,
+        id:uuid(),
         action:"Cleaning my room Cleaning my room Cleaning my room",
         done:false
       },
       {
-        id:2,
+        id:uuid(),
         action:"Watching a Course",
         done:true
       },
       {
-        id:3,
+        id:uuid(),
         action:"Studying",
         done:false
       }
@@ -36,11 +38,21 @@ actionisdeleted = (id) => {
   this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]});
 }
 
+addaction = (action) => {
+  const newaction = {
+    id:uuid(),
+    action,
+    done:false
+  }
+  this.setState({todos : [...this.state.todos , newaction]});
+}
+
   render(){
   return (
     <div className="App">
       <Navbar/>
       <Todolist todos = {this.state.todos} actioniscompleted={this.actioniscompleted} actionisdeleted={this.actionisdeleted}/>
+      <Addaction addaction={this.addaction}/>
     </div>
   );
 }
