@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Todolist from './components/Todolist'
 
-function App() {
+class App extends Component{
+  state = {
+    todos:[
+      {
+        id:1,
+        action:"Cleaning my room Cleaning my room Cleaning my room",
+        done:false
+      },
+      {
+        id:2,
+        action:"Watching a Course",
+        done:true
+      },
+      {
+        id:3,
+        action:"Studying",
+        done:false
+      }
+    ]
+  }
+  actioniscompleted = (id) => {
+   this.setState ({todos: this.state.todos.map(todo => {
+     if(todo.id === id){
+       todo.done = !todo.done;
+     }
+     return todo;
+})})
+}
+
+actionisdeleted = (id) => {
+  this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]});
+}
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Todolist todos = {this.state.todos} actioniscompleted={this.actioniscompleted} actionisdeleted={this.actionisdeleted}/>
     </div>
   );
+}
 }
 
 export default App;

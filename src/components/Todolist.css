@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  }
+  .container .box {
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+
+  }
