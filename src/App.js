@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todolist from './components/Todolist'
+import Navbar from './components/Navbar'
 
 class App extends Component{
   state = {
@@ -38,6 +39,7 @@ actionisdeleted = (id) => {
   render(){
   return (
     <div className="App">
+      <Navbar/>
       <Todolist todos = {this.state.todos} actioniscompleted={this.actioniscompleted} actionisdeleted={this.actionisdeleted}/>
     </div>
   );
