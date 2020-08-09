@@ -34,7 +34,9 @@ export class Todocard extends Component {
 }
 
 Todocard.propTypes = {
-    todo:propTypes.object.isRequired
+    todo:propTypes.object.isRequired,
+    actioniscompleted:propTypes.func.isRequired,
+    actionisdeleted:propTypes.func.isRequired
 }
 
 export default Todocard

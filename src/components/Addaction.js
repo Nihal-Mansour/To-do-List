@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import propTypes from 'prop-types'
+import './Addaction.css'
 
 export class Addaction extends Component {
     state ={
@@ -16,11 +18,20 @@ export class Addaction extends Component {
     render() {
         return (
            <form onSubmit={this.onSubmit}>
+               <div className="leftcontent">
+               <span className="formtitle">Organize Your Work and Life</span>
+               </div>
+               <div className="formcontent">
                <input type="text" name="action" placeholder="Add Todo ....." value = {this.state.action} onChange={this.onChange}/>
                <input type="submit" value="Submit"/>
+               </div>
            </form>
         )
     }
+}
+
+Addaction.propTypes = {
+    addaction:propTypes.func.isRequired
 }
 
 export default Addaction
