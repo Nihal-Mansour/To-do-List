@@ -16,11 +16,17 @@ export class Todocard extends Component {
         }
     }
 
+    editbutton = () =>{
+        return {
+            display:this.props.todo.done ? 'none' : ''
+        }
+    }
+
     render() {
-        const {id,action} = this.props.todo;
+        const {id,title,action} = this.props.todo;
         return (
             <div className="todoCard" style={this.actionisdone()}>
-                <span className="title">Title</span>
+                <span className="title">{title}</span>
                 <hr/>
                 <p>
                     {action}
@@ -28,7 +34,7 @@ export class Todocard extends Component {
                 <div className="mt-auto">
                 <button className="isdonebutton"  style={this.actionbutton()} onClick={this.props.actioniscompleted.bind(this ,id)}>Done</button> 
               
-                    <button className="editing">
+                    <button className="editing" style={this.editbutton()}>
                     <i className="fa fa-edit"></i>
                     </button>
                     <button className="deleting" onClick={this.props.actionisdeleted.bind(this ,id)}>

@@ -8,7 +8,7 @@ function Navbar(){
     <span className="Todolistheader">My TodoList </span>
     <span className="Todolistlinks">
     <Link style={linkstyle} to="/">Home</Link> 
-    <Link style={linkstyle} to="/about">Aboutme</Link>
+    <Link style={linkstyle} to="/about">About</Link>
     </span>
 </nav>
     )

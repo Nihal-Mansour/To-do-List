@@ -13,21 +13,25 @@ class App extends Component{
     todos:[
       {
         id:uuid(),
+        title:"Sports",
         action:"Cleaning my room Cleaning my room Cleaning my room",
         done:false,
       },
       {
         id:uuid(),
+        title:"Education",
         action:"Watching a Course",
         done:true,
       },
       {
         id:uuid(),
+        title:"Job",
         action:"Studying",
         done:false,
       }
     ]
   }
+
   actioniscompleted = (id) => {
    this.setState ({todos: this.state.todos.map(todo => {
      if(todo.id === id){
@@ -41,16 +45,16 @@ actionisdeleted = (id) => {
   this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]});
 }
 
-addaction = (action) => {
+addaction = (action,title) => {
   const newaction = {
     id:uuid(),
+    title,
     action,
     done:false
   }
   this.setState({todos : [...this.state.todos , newaction]});
 }
-
-  render(){
+  render(){  
   return (
     <Router>
     <div className="App">
@@ -67,5 +71,7 @@ addaction = (action) => {
   );
 }
 }
+
+
 
 export default App;
