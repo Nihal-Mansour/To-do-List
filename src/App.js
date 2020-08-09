@@ -6,10 +6,12 @@ import Navbar from './components/Navbar'
 import Addaction from './components/Addaction'
 import {v4 as uuid} from 'uuid'
 import Aboutpage from './components/Aboutpage'
+import Alert from './components/Alert'
 
 
 class App extends Component{
   state = {
+    showalert:false,
     todos:[
       {
         id:uuid(),
@@ -52,9 +54,14 @@ addaction = (action,title) => {
     action,
     done:false
   }
+  if(newaction.title !== "" && newaction.action !== ""){
   this.setState({todos : [...this.state.todos , newaction]});
+  }else{
+    this.setState({showalert:true});
+  }
 }
   render(){  
+  let closealert = () => this.setState({showalert:false})
   return (
     <Router>
     <div className="App">
@@ -66,6 +73,7 @@ addaction = (action,title) => {
         </React.Fragment>
       )} />
       <Route path="/about" component={Aboutpage} />
+      <Alert show = {this.state.showalert} onHide={closealert}/>
     </div>
     </Router>
   );
