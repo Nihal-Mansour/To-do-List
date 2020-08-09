@@ -14,17 +14,17 @@ class App extends Component{
       {
         id:uuid(),
         action:"Cleaning my room Cleaning my room Cleaning my room",
-        done:false
+        done:false,
       },
       {
         id:uuid(),
         action:"Watching a Course",
-        done:true
+        done:true,
       },
       {
         id:uuid(),
         action:"Studying",
-        done:false
+        done:false,
       }
     ]
   }

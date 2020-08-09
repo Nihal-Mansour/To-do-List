@@ -5,7 +5,14 @@ import './Todocard.css'
 export class Todocard extends Component {
     actionisdone = () =>{
         return {
-            textDecoration: this.props.todo.done ? 'line-through' : 'none'
+            textDecoration: this.props.todo.done ? 'line-through' : 'none',
+            boxShadow: this.props.todo.done ? '#2C423F 0 0 10px' : '',
+            opacity:this.props.todo.done ? '0.7' : '1'
+        }
+    }
+    actionbutton= () =>{
+        return{
+            backgroundColor:this.props.todo.done ? '#2C423F' : 'rgb(112, 106, 106)',
         }
     }
 
@@ -19,7 +26,7 @@ export class Todocard extends Component {
                     {action}
                 </p>
                 <div className="mt-auto">
-                <button className="isdonebutton" onClick={this.props.actioniscompleted.bind(this ,id)}>Done</button> 
+                <button className="isdonebutton"  style={this.actionbutton()} onClick={this.props.actioniscompleted.bind(this ,id)}>Done</button> 
               
                     <button className="editing">
                     <i className="fa fa-edit"></i>
