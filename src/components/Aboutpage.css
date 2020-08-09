@@ -1,0 +1,25 @@
+.containerbox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+    display: block;
+}
+
+.about {
+  margin: 17px;
+  color: #62177a;
+  font-size: 35px;
+  font-weight: 500;
+}
+.hrline {
+width: 400px;
+margin-left: 12px;
+}
+.aboutmytodolist {
+  color: black;
+  font-size: 20px;
+  display: block;
+  margin: 12px;
+}
