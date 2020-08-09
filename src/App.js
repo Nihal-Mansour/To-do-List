@@ -61,7 +61,7 @@ addaction = (action,title) => {
       <Navbar/>
       <Route exact path="/" render={props =>( 
         <React.Fragment>
- <Todolist todos = {this.state.todos} actioniscompleted={this.actioniscompleted} actionisdeleted={this.actionisdeleted}/>
+ <Todolist todos = {this.state.todos} actioniscompleted={this.actioniscompleted} actionisdeleted={this.actionisdeleted} editingaction={this.editingaction}/>
       <Addaction addaction={this.addaction}/>
         </React.Fragment>
       )} />

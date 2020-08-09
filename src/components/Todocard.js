@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import propTypes from 'prop-types'
 import './Todocard.css'
 
+
 export class Todocard extends Component {
+ 
     actionisdone = () =>{
         return {
             textDecoration: this.props.todo.done ? 'line-through' : 'none',
@@ -16,11 +18,7 @@ export class Todocard extends Component {
         }
     }
 
-    editbutton = () =>{
-        return {
-            display:this.props.todo.done ? 'none' : ''
-        }
-    }
+
 
     render() {
         const {id,title,action} = this.props.todo;
@@ -33,10 +31,8 @@ export class Todocard extends Component {
                 </p>
                 <div className="mt-auto">
                 <button className="isdonebutton"  style={this.actionbutton()} onClick={this.props.actioniscompleted.bind(this ,id)}>Done</button> 
-              
-                    <button className="editing" style={this.editbutton()}>
-                    <i className="fa fa-edit"></i>
-                    </button>
+                 
+   
                     <button className="deleting" onClick={this.props.actionisdeleted.bind(this ,id)}>
                     <i className="fa fa-trash"></i>
                     </button>
@@ -49,7 +45,7 @@ export class Todocard extends Component {
 Todocard.propTypes = {
     todo:propTypes.object.isRequired,
     actioniscompleted:propTypes.func.isRequired,
-    actionisdeleted:propTypes.func.isRequired
+    actionisdeleted:propTypes.func.isRequired,
 }
 
 export default Todocard

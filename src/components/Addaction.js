@@ -31,7 +31,7 @@ export class Addaction extends Component {
             <input
               type="text"
               name="title"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Add Title ....."
               required=""
               value={this.state.title}
@@ -45,7 +45,7 @@ export class Addaction extends Component {
             <input
               type="text"
               name="action"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Add Todo ....."
               required=""
               value={this.state.action}
