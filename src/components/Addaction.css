@@ -13,13 +13,13 @@
 
 .box1 {
   width: 50%;
-  margin: 15% 20px 20px 5px;
+  margin: 12% 20px 20px 5px;
   box-sizing: border-box;
 }
 
 .box2 {
   width: 50%;
-  margin: 8% 20px 20px 5px;
+  margin: 4% 20px 20px 5px;
   box-sizing: border-box;
 }
 
@@ -102,8 +102,7 @@ input:focus {
   border: transparent;
   width: 150px;
   height: 45px;
-  margin: 35px;
-  float: right;
+  margin: 35px 0px 25px 0px;
 }
 
 .submitbtn:hover {

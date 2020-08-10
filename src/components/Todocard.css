@@ -1,9 +1,8 @@
 .todoCard {
   padding: 18px;
-  width: 420px;
+  width: 100%;
   border-radius: 12px;
-  box-shadow: #23022e 0 0 8px;
-  margin: 35px;
+  box-shadow: #23022e 0 0 10px;
 }
 .todoCard:hover {
   box-shadow: #23022e 0 0 5px;

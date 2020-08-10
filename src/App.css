@@ -19,6 +19,13 @@ a {
   grid-template-rows: minmax(auto, auto);
   margin: auto;
   grid-auto-flow: dense;
-  grid-gap: 7px;
+  grid-gap: 25px;
   transition: 0.5s;
+  margin: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  .cardbox {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
