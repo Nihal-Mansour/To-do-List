@@ -15,19 +15,19 @@ class App extends Component {
       {
         id: uuid(),
         title: "Sports",
-        action: "Cleaning my room Cleaning my room Cleaning my room",
+        action: "Perform some Exercises",
         done: false,
       },
       {
         id: uuid(),
         title: "Education",
-        action: "Watching a Course",
+        action: "Watching Web development Courses",
         done: true,
       },
       {
         id: uuid(),
-        title: "Job",
-        action: "Studying",
+        title: "Entertainment",
+        action: "Go to the Garden",
         done: false,
       },
     ],
