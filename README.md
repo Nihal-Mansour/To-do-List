@@ -1,3 +1,5 @@
+This Project is made using React js
+
 In the project directory, you can run:
 
 ### `npm start`
