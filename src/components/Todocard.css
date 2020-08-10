@@ -1,54 +1,56 @@
-.todoCard{
-    padding: 18px;
-    width: 325px;
-    border-radius: 12px;
-    box-shadow: #23022E 0 0 8px;
-    margin: 35px;
+.todoCard {
+  padding: 18px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: #23022e 0 0 8px;
+  margin: 35px;
 }
-.todoCard:hover{
-    box-shadow: #23022E 0 0 5px;
+.todoCard:hover {
+  box-shadow: #23022e 0 0 5px;
 }
-.todoCard p{
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.isdonebutton{
-    background-color: rgb(112, 106, 106);
-    border-radius: 20px;
-    border-color:rgb(112, 106, 106);
-    border: transparent;
-    width: 80px;
-    height: 40px;
-}
-.isdonebutton:hover{
-    background-color: rgb(68, 66, 66);
-    border-color:rgb(68, 66, 66);
-    transition: transform 0.5s;
-    transform: scale(1.1);
+.todoCard p {
+  font-size: 17px;
+  font-weight: 500;
 }
 
-button:focus{
-    outline: 0 !important;
+.isdonebutton {
+  background-color: rgb(112, 106, 106);
+  border-radius: 20px;
+  border-color: rgb(112, 106, 106);
+  border: transparent;
+  width: 80px;
+  height: 40px;
+}
+.isdonebutton:hover {
+  background-color: rgb(68, 66, 66);
+  border-color: rgb(68, 66, 66);
+  transition: transform 0.5s;
+  transform: scale(1.1);
 }
 
-.title{
-    font-size: 20px;
-    font-weight: 600;
+button:focus {
+  outline: 0 !important;
 }
 
-.editing,.deleting{
-    float:right;
-    width: 35px;
-    height: 30px;
-    border-radius: 50%;
-    border: transparent;
-    background-color: rgb(209, 202, 202);
-    margin: 3px;
+.title {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.editing:hover,.deleting:hover{
-    background-color: rgb(168, 166, 166);
-    transition: transform 0.5s;
-    transform: scale(1.1);
+.editing,
+.deleting {
+  float: right;
+  width: 35px;
+  height: 30px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: rgb(209, 202, 202);
+  margin: 3px;
+}
+
+.editing:hover,
+.deleting:hover {
+  background-color: rgb(168, 166, 166);
+  transition: transform 0.5s;
+  transform: scale(1.1);
 }

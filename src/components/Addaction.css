@@ -1,124 +1,122 @@
 .container {
-    background-color: #333;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    border-radius: 0 50px 0 50px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
-  .box1 {
-    width: 50%;
-    margin: 15% 20px 20px 5px;
-    box-sizing: border-box;
-  }
-
-  .box2 {
-    width: 50%;
-    margin: 8% 20px 20px 5px;
-    box-sizing: border-box;
-  }
-
-  .formtitle{
-    float: left;
-    color: white;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    top: 50%;
+  background-color: #333;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  border-radius: 0 50px 0 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.nameinputfield{
-    margin-bottom: 15px;
-    margin-top: 40px;
-    color: white;
-    font-weight: 700;
+.box1 {
+  width: 50%;
+  margin: 15% 20px 20px 5px;
+  box-sizing: border-box;
 }
 
-#submitinputfield{
-background: transparent;
-border: transparent;
-color: white;
+.box2 {
+  width: 50%;
+  margin: 8% 20px 20px 5px;
+  box-sizing: border-box;
 }
 
-input:focus{
-    outline: 0 !important;
-    background: transparent;
+.formtitle {
+  float: left;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  top: 50%;
 }
 
-.input-field{
-    position: relative;
-    height: 40px;
-    width: 100%;
+.nameinputfield {
+  margin-bottom: 15px;
+  margin-top: 40px;
+  color: white;
+  font-weight: 700;
 }
 
-.input-field input[type="text"]{
-    position: absolute;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    font-size: 17px;
-    color: white;
-    width: 100%;
-
+#submitinputfield {
+  background: transparent;
+  border: transparent;
+  color: white;
 }
 
-.input-field span{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: block;
-    background: #555;
-    width: 100%;
-    height: 2px; 
+input:focus {
+  outline: 0 !important;
+  background: transparent;
 }
 
-.input-field span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #23022E;
-    transform: scaleX(0);
-    transform-origin:right;
-    transition: transform 0.5s ease-in-out;
+.input-field {
+  position: relative;
+  height: 40px;
+  width: 100%;
+}
 
+.input-field input[type="text"] {
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 17px;
+  color: white;
+  width: 100%;
+}
+
+.input-field span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: #555;
+  width: 100%;
+  height: 2px;
+}
+
+.input-field span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #23022e;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
 }
 
 .input-field input[type="text"]:focus ~ span::before,
-.input-field input[type="text"]:invalid ~ span::before{
-    transform: scaleX(1);
-    transform-origin:left;
-    transition: transform 0.5s ease-in-out;
+.input-field input[type="text"]:invalid ~ span::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
 }
 
-.submitbtn{
-    background-color: #23022E;
-    border-radius: 20px;
-    border: transparent;
-    width: 150px;
-    height: 40px;
-    margin: 35px;
-    float: right;
+.submitbtn {
+  background-color: #23022e;
+  border-radius: 20px;
+  border: transparent;
+  width: 150px;
+  height: 45px;
+  margin: 35px;
+  float: right;
 }
 
-.submitbtn:hover{
-    transition: transform 0.5s;
-    transform: scale(1.1);
+.submitbtn:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 993px) {
-    .container {
-      flex-flow: wrap;
-      width: 100%;
-    }
-    .box {
-      width: 100%;
-    }
+  .container {
+    flex-flow: wrap;
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+  }
 }

@@ -5,7 +5,7 @@ import "./Addaction.css";
 export class Addaction extends Component {
   state = {
     action: "",
-    title:""
+    title: "",
   };
 
   // event.target.name is helpful if there is many properties in the state
@@ -13,7 +13,7 @@ export class Addaction extends Component {
     this.setState({ [event.target.name]: event.target.value });
   onSubmit = (event) => {
     event.preventDefault();
-    this.props.addaction(this.state.action , this.state.title);
+    this.props.addaction(this.state.action, this.state.title);
     this.setState({ action: "" });
     this.setState({ title: "" });
   };
@@ -26,36 +26,36 @@ export class Addaction extends Component {
         </div>
         <div className="box2">
           <form onSubmit={this.onSubmit}>
-          <h4 className="nameinputfield">Add a title for your task</h4>
+            <h4 className="nameinputfield">Add a title for your task</h4>
             <div className="input-field">
-            <input
-              type="text"
-              name="title"
-              autoComplete="off"
-              placeholder="Add Title ....."
-              required=""
-              value={this.state.title}
-              onChange={this.onChange}
-            />
-            <span></span>
+              <input
+                type="text"
+                name="title"
+                autoComplete="off"
+                placeholder="Add Title ....."
+                required=""
+                value={this.state.title}
+                onChange={this.onChange}
+              />
+              <span></span>
             </div>
-            
+
             <h4 className="nameinputfield">Add a description for your task</h4>
             <div className="input-field">
-            <input
-              type="text"
-              name="action"
-              autoComplete="off"
-              placeholder="Add Todo ....."
-              required=""
-              value={this.state.action}
-              onChange={this.onChange}
-            />
-            <span></span>
+              <input
+                type="text"
+                name="action"
+                autoComplete="off"
+                placeholder="Add Todo ....."
+                required=""
+                value={this.state.action}
+                onChange={this.onChange}
+              />
+              <span></span>
             </div>
 
             <button className="submitbtn">
-            <input type="submit" value="Add" id="submitinputfield"/>
+              <input type="submit" value="Add" id="submitinputfield" />
             </button>
           </form>
         </div>
