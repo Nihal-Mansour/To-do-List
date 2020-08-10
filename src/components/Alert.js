@@ -4,7 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 export class Alert extends Component {
   render() {
     return (
-      <Modal show={this.props.show} onHide={this.props.onHide}>
+      <Modal show={this.props.show} onHide={this.props.onHide} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Task Alert</Modal.Title>
         </Modal.Header>
